@@ -1,6 +1,12 @@
-﻿namespace test_login.Data.DbContext
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using test_login.Models;
+
+namespace test_login.Data;
+
+class AppDbContext : IdentityDbContext<ApplicatonUser>
 {
-    public class AppDbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
 }
